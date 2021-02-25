@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheshire Town & Country | Painters and Decorators in Congleton Cheshire</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.png">
+<script src="https://kit.fontawesome.com/081d436a49.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <header id="head">
+            <div id="call-section">
+                <i class="fas fa-phone-alt" id="phone-icon"></i> 
+                <a href="tel:07939 635472" id="phone-number">07939 635472</a>
+            </div>
+            
+
+            <a href="https://www.facebook.com" class="social-icons" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/ctc_decortaor_/" class="social-icons" target="_blank"><i class="fab fa-instagram"></i></a>
+            
+     
+            <div id="name">
+                <p>Cheshire Town & Country</p>
+                <i>Bespoke Painters & Decoraters</i>
+                <div id="call-to-contact" onclick="contactToggle()">
+                    <p>Request Free Quote</p>
+                </div>
+            </div>
+            
+        </header>
+
+        <section id="pink"  onclick="servicesToggle()">
+            <div class="menu-info">
+                <h1>Services</h1>
+                <i class="fas fa-paint-roller"></i>
+                <div id="services-info">
+                    <div class="service-description">
+                        <h2>Decorating</h2>
+                        <p>If you're after a freshen up or a complete revamp, leave all the hard work to us! Whether it's your skirting boards, one room or a whole house, we will give your property the fresh look you're after.</p>    
+                    </div>
+
+                    <div class="service-description">
+                        <h2>Interior & Exterior Painting</h2>
+                        <p>Interior or Exterior walls, we will use the best quality paints to ensure your property looks the best it can, inside and out.</p>
+                    </div>
+
+                    <div class="service-description">
+                        <h2>Wallpaper Hanging</h2>
+                        <p>Whether it's a feature wall or a full room, you want Wallpaper to be done right. <br/>Why not just leave it to us, with 18 years experience hanging Wallpaper, ensuring you get the look you want with the highest level of finish.</p>
+                    </div>
+                  
+                </div>
+            </div>
+        </section>
+
+        <section id="pleat" onclick="galleryToggle()">
+            <div class="menu-info">
+                <h1>Gallery</h1>
+                <i class="fas fa-camera"></i>
+            </div>
+
+            <div id="container" onclick="event.cancelBubble=true;if (event.stopPropagation) event.stopPropagation();">
+                <div class="box">
+                    <img src="images/interior.jpeg">
+                    <span>Interior Decorating</span>
+                  </div>
+                <div class="box">
+                  <img src="images/wallpaper.jpeg">
+                  <span>Wallpaper</span>
+                </div>
+                <div class="box">
+                  <img src="images/exterior.jpeg">
+                  <span>Commercial Decorating</span>
+                </div>
+                <div class="box">
+                  <img src="images/fascias.jpeg">
+                  <span>Fascias</span>
+                </div>
+              </div>
+        </section>
+
+        <section id="form-contact" onclick="contactToggle()" >
+            <div class="menu-info">
+                
+                <h1>Contact</h1>
+                <i class="fas fa-phone-alt"></i>
+            </div>
+            
+           
+            <form action="contact.php" method="POST" onclick="event.cancelBubble=true;if (event.stopPropagation) event.stopPropagation();">
+                
+                <h1>Get your free quote</h1>
+                <input placeholder="Full Name*" type="text" name="name"/>
+                <input placeholder="Email Address*" type="email" name="email"/>
+                <input placeholder="Phone Number*" type="number" name="number"/>
+                
+                <textarea name="message" placeholder="Please provide a brief description of the job">
+                    
+                </textarea>
+                <input value="submit" type="submit" id="submit-button"/>
+                
+            </form>
+
+            
+            
+        </section>
+       
+    </div>
+
+    <footer>
+        <p> <i class="far fa-copyright"></i>Copyright 2021 Cheshire Town & Country Painters & Decorators</p>
+        <p>Website by <a href="http://www.douglasfrancis.co.uk/" target="_blank">Douglas Francis</a></p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
