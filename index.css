@@ -323,3 +323,36 @@ footer {
     height: 100%;
   }
    
+
+  @media only screen and (orientation: portrait) {
+      #name {
+          width: 90%;
+          margin-top: 30%;
+      }
+      form{
+          width: 90%;
+      }
+
+      #services-info{
+          overflow-y: scroll;
+      }
+
+      h1{
+          font-size: 1rem ;
+      }
+      .menu-info{
+          padding-top: 30px;
+      }
+      .box{
+          display: block;
+      }
+      span{
+          font-size: 0.8em !important;
+      }
+      .box:hover { 
+          flex: 1 1 75%; 
+        }
+        .box > img {
+            width: 100%;
+        }
+  }
