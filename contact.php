@@ -14,7 +14,7 @@ $mail->SMTPDebug  = 1;
 $mail->SMTPAuth   = TRUE;
 $mail->SMTPSecure = "tls";
 $mail->Port       = 587;
-$mail->Host       = "smtp.gmail.com";
+$mail->Host       = "tls://smtp.gmail.com";
 $mail->Username   = "cheshiretownandcountry@gmail.com";
 $mail->Password   = "Clemjackie19222007";
 
