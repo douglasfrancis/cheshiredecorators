@@ -5,6 +5,15 @@ use PHPMailer\PHPMailer\Exception;
 require 'PHPMailer-master/src/Exception.php';
 require 'PHPMailer-master/src/PHPMailer.php';
 require 'PHPMailer-master/src/SMTP.php';
+require_once realpath(__DIR__ . "/vendor/autoload.php");
+
+use Dotenv\Dotenv;
+
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+$username = getenv("GMAIL_USERNAME");
+$password = getenv("GMAIL_PASSWORD");
 
 $mail = new PHPMailer();
 $mail->IsSMTP();
@@ -15,8 +24,8 @@ $mail->SMTPAuth   = TRUE;
 $mail->SMTPSecure = "tls";
 $mail->Port       = 587;
 $mail->Host       = "tls://smtp.gmail.com";
-$mail->Username   = "dougiefrancis@gmail.com";
-$mail->Password   = "C2h6o123";
+$mail->Username   = $username;
+$mail->Password   = $password;
 
 $name = $_POST["name"];
 $email = $_POST["email"];
@@ -24,7 +33,7 @@ $number = $_POST["number"];
 $message = $_POST["message"];
 
 $mail->IsHTML(true);
-$mail->AddAddress("dougiefrancis@gmail.com", "Doug");
+$mail->AddAddress($username, "Richard");
 $mail->SetFrom($email, $name);
 $mail->AddReplyTo($email, $name);
 $mail->Subject = "New Job Enquiry";
