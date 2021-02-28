@@ -11,10 +11,10 @@ require_once realpath(__DIR__ . "/vendor/autoload.php");
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-$username = getenv("GMAIL_USERNAME");
-$password = getenv("GMAIL_PASSWORD");
+$username = $_ENV["GMAIL_USERNAME"];
+$password = $_ENV["GMAIL_PASSWORD"];
 
-$mail = new PHPMailer();
+$mail = new PHPMailer(); 
 $mail->IsSMTP();
 $mail->Mailer = "smtp";
 
@@ -45,8 +45,6 @@ if(!$mail->Send()) {
     echo '<meta http-equiv="refresh" content="0;url=thanks.html" />';
     exit;
 }
-
-
 
 
 
