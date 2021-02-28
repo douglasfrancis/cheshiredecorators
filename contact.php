@@ -2,12 +2,11 @@
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use Dotenv\Dotenv;
 require 'PHPMailer-master/src/Exception.php';
 require 'PHPMailer-master/src/PHPMailer.php';
 require 'PHPMailer-master/src/SMTP.php';
 require_once realpath(__DIR__ . "/vendor/autoload.php");
-
-use Dotenv\Dotenv;
 
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
@@ -42,7 +41,6 @@ $content = "The job description is: $message <br> Contact them on: $number or em
 $mail->MsgHTML($content); 
 if(!$mail->Send()) {
     echo '<meta http-equiv="refresh" content="0;url=error.html" />';
-  var_dump($mail);
 } else {
     echo '<meta http-equiv="refresh" content="0;url=thanks.html" />';
     exit;
